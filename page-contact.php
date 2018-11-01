@@ -35,7 +35,11 @@
 							<div class="col-lg-10 col-md-12 background_solid"> 
 								<div class="contact_intro">
 									<h1 class="intro_title"><?php the_title();?></h1>
-									<?php include plugin_dir_path( __FILE__ ) . 'contact-form.php'; ?>
+
+									<?php
+										the_content();
+									 	include plugin_dir_path( __FILE__ ) . 'contact-form.php'; 
+									 	?>
 								</div> 
 							</div><!-- col-md-10 col-sm-10 -->	
 							

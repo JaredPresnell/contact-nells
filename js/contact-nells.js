@@ -1,4 +1,4 @@
-
+jQuery(document).ready( function($){
 	// CONTACT FORM
 	$('#nellsContactForm').on('submit', function(e){
 		e.preventDefault();
@@ -53,3 +53,4 @@
 			}	
 		});
 	});
+});

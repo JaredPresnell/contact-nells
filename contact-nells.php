@@ -15,7 +15,7 @@
 defined('ABSPATH') or die('stop that');
 
 
-// include plugin_dir_path( __FILE__ ) . 'books-cpt.php';
+include plugin_dir_path( __FILE__ ) . 'contact-cpt.php';
 include plugin_dir_path( __FILE__ ) . 'ajax.php';
 include plugin_dir_path( __FILE__ ) . 'create-template.php';
 
