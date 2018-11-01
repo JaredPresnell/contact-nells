@@ -1,0 +1,110 @@
+@import 'base/mixins';	
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+$electric: #33ffff;
+$text-color: #fff;
+$acolor:#00ffee;
+$sidebar_color: #0f5f7f;
+$scheme1: #5680E9;
+$scheme2: #84ceeb;
+$scheme3: #5ab9ea;
+$scheme4: #c1c8e4;
+$scheme5: #8860d0;
+
+$bookish-red:#7f160f;
+$bookish-brown:#7f4e0f;
+//$bookish-gray: #7f4e0fa6;
+$bookish-gray: rgba(127,78,15, .65);
+$bookish-black:#3a2510;
+// ======================
+//   	  CONTACT
+// ======================
+#nellsContactForm{
+	border-top: 1px solid $scheme3;
+	padding-top: 26px;
+	margin-top:25px;
+}
+
+.nells_contact_label{
+	@include for-phone-only
+	{
+		padding-left:0px;
+		padding-right:0px;
+	}
+}
+
+.nells_contact_input,
+.btn_contact_nells{
+	@include for-phone-only
+	{
+		margin-left:0px;
+	}
+	@include for-tablet-portrait-up{
+		margin-left:20px;
+		margin-right: 20px;
+	}
+}	
+
+.form-control{
+	@include animate(all, 200ms);
+	&:focus{
+		@include animate(all, 320ms);	
+		border:1px solid $scheme3;
+		box-shadow:none;
+		box-shadow: 0 0 2px 1px $scheme3;
+	}
+}
+.nells_contact_label{
+	display:block !important;
+	max-width:150px;
+	width:100%;
+	text-align:right;	
+	font-size:.85em;
+}
+.btn_contact_nells{
+	width:100%;
+	background-color: $sidebar_color;
+	padding-left:0px;
+	opacity:0.8;
+	@include animate(all, 320ms);
+	&:hover:not([disabled]){
+		@include animate(all, 320ms);
+		opacity:1;
+	}	
+}
+#message{
+	height:120px;
+}
+
+.contact_intro{
+	margin-top:50px;
+	margin-bottom: 30px;
+	font-size: 1.5em;
+	margin-left:20px;
+	margin-right:20px;
+	padding-bottom:25px;
+	//	border-bottom: 1px solid $scheme3;
+}
+
+.form-control-msg{
+	display:none;
+	margin-left:20px;
+}
+
+.js-show-feedback{
+	display:block;
+}
